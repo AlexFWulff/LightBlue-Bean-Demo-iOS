@@ -26,13 +26,6 @@
     [center addObserver:self selector:@selector(beanDisconnected:) name:@"BeanDisconnected" object:nil];
 }
 
--(void)viewDidUnload {
-    [super viewDidUnload];
-    
-    [self.updateAccelerationTimer invalidate];
-    self.updateAccelerationTimer = nil;
-}
-
 -(void)gotAccelerationData: (NSNotification *)notification {
     //Now you can do something with AppDelegate.x AppDelegate.y AppDelegate.z
 }
