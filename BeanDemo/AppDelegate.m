@@ -140,11 +140,6 @@
     
     NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:bean,@"bean", nil];
     
-    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:0];
-    localNotification.alertBody = [NSString stringWithFormat:@"Device: \"%@\" did disconnect!",bean.name];
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-    
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     NSNotification *dataNotification = [[NSNotification alloc] initWithName:@"BeanDisconnected" object:nil userInfo:userInfo];
     [center postNotification:dataNotification];
