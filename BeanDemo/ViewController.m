@@ -22,7 +22,7 @@
     //These notifications will be called from events in the AppDelegate
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(gotAccelerationData:) name:@"GotAcceleration" object:nil];
-    [center addObserver:self selector:@selector(beanConnected:) name:@"GotConnected" object:nil];
+    [center addObserver:self selector:@selector(beanConnected:) name:@"BeanConnected" object:nil];
     [center addObserver:self selector:@selector(beanDisconnected:) name:@"BeanDisconnected" object:nil];
 }
 
